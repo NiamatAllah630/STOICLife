@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="12dp"
+    app:cardCornerRadius="22dp"
+    app:cardElevation="3dp"
+    app:cardBackgroundColor="@color/beige_card">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/tv_journal_icon"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:gravity="center"
+            android:text="☀️"
+            android:textSize="26sp"
+            android:background="@drawable/bg_circle_gold_light" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:layout_marginStart="14dp">
+
+            <TextView
+                android:id="@+id/tv_journal_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Intention · 2026-04-20"
+                android:textColor="@color/gold_accent"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="6dp" />
+
+            <TextView
+                android:id="@+id/tv_journal_contenu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Contenu de la réflexion..."
+                android:textColor="@color/navy_primary"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:lineSpacingExtra="4dp"
+                android:maxLines="4"
+                android:ellipsize="end" />
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="34dp"
+            android:layout_height="34dp"
+            android:gravity="center"
+            android:text="›"
+            android:textColor="@color/gold_accent"
+            android:textSize="28sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.STOICLife">
+
+        <!-- Splash -->
+        <activity
+            android:name=".view.SplashActivity"
+            android:exported="true"
+            android:theme="@style/Theme.STOICLife.Splash">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- Auth -->
+        <activity android:name=".view.LoginActivity" android:exported="false" />
+        <activity android:name=".view.RegisterActivity" android:exported="false" />
+
+        <!-- Main -->
+        <activity android:name=".view.HomeActivity" android:exported="false" />
+
+        <!-- Features -->
+
+        <activity android:name=".view.SuiviEmotionnelActivity" />
+        <activity android:name=".view.SessionActivity" />
+        <activity android:name=".view.DetailActiviteActivity" />
+        <activity android:name=".view.DemarrerActiviteActivity" />
+        <activity android:name=".view.EditActiviteActivity" />
+
+
+
+        <activity android:name=".view.JournalActivity" />
+        <activity android:name=".view.CitationsActivity" />
+        <activity android:name=".view.ParametresActivity" />
+        <activity
+            android:name=".view.AddPlanningActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name=".view.FocusActivity" />
+    </application>
+
+</manifest>

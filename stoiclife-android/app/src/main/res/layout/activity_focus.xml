@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_focus">
+
+    <ImageButton
+        android:id="@+id/btn_back_focus"
+        android:layout_width="44dp"
+        android:layout_height="44dp"
+        android:layout_margin="16dp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:contentDescription="Retour"
+        android:src="@android:drawable/ic_media_previous"
+        app:tint="@color/focus_icon_inactive"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_tache_focus"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="48dp"
+        android:gravity="center"
+        android:text="Session de focus"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/btn_back_focus"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ProgressBar
+        android:id="@+id/progress_timer"
+        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+        android:layout_width="0dp"
+        android:layout_height="6dp"
+        android:layout_marginTop="12dp"
+        android:max="100"
+        android:progress="0"
+        android:progressBackgroundTint="#20FFFFFF"
+        android:progressTint="@color/gold_accent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_tache_focus" />
+
+    <View
+        android:id="@+id/circle_anim_3"
+        android:layout_width="280dp"
+        android:layout_height="280dp"
+        android:background="@drawable/bg_circle_pulse"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <View
+        android:id="@+id/circle_anim_2"
+        android:layout_width="210dp"
+        android:layout_height="210dp"
+        android:background="@drawable/bg_circle_pulse"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <View
+        android:id="@+id/circle_anim_1"
+        android:layout_width="170dp"
+        android:layout_height="170dp"
+        android:background="@drawable/bg_circle_pulse"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/ll_timer_center"
+        android:layout_width="140dp"
+        android:layout_height="140dp"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:background="@drawable/bg_timer_center"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <TextView
+            android:id="@+id/tv_timer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="monospace"
+            android:text="25:00"
+            android:textColor="@color/gold_accent"
+            android:textSize="36sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tv_statut_focus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Prêt"
+            android:textColor="#99FFFFFF"
+            android:textSize="12sp" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_pourcent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="0% accompli"
+        android:textColor="#60FFFFFF"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/circle_anim_3" />
+
+    <TextView
+        android:id="@+id/tv_quote_focus"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="16dp"
+        android:text="« Concentre-toi sur ce que tu contrôles »"
+        android:textColor="@color/gold_light"
+        android:textSize="12sp"
+        android:textStyle="italic"
+        app:layout_constraintBottom_toTopOf="@id/ll_durees"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/ll_durees"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="12dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@id/btn_demarrer_focus"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <Button
+            android:id="@+id/btn_25min"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:text="25 MIN"
+            android:textColor="@color/gold_accent" />
+
+        <Button
+            android:id="@+id/btn_45min"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:alpha="0.5"
+            android:background="@android:color/transparent"
+            android:text="45 MIN"
+            android:textColor="@color/focus_icon_inactive" />
+
+        <Button
+            android:id="@+id/btn_60min"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:alpha="0.5"
+            android:background="@android:color/transparent"
+            android:text="60 MIN"
+            android:textColor="@color/focus_icon_inactive" />
+    </LinearLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_demarrer_focus"
+        android:layout_width="220dp"
+        android:layout_height="56dp"
+        android:layout_marginBottom="16dp"
+        android:text="Démarrer"
+        android:textColor="@color/navy_primary"
+        android:textStyle="bold"
+        app:backgroundTint="@color/gold_accent"
+        app:cornerRadius="40dp"
+        android:elevation="12dp"
+        app:layout_constraintBottom_toTopOf="@id/ll_sons"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+    <LinearLayout
+        android:id="@+id/ll_sons"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <!-- SILENCE -->
+        <ImageButton
+            android:id="@+id/btn_son_silence"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:layout_margin="8dp"
+            android:background="@drawable/bg_sound_active"
+            android:backgroundTint="@null"
+            android:padding="14dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/ic_silent"
+            android:contentDescription="Silence"
+            app:tint="@color/gold_accent" />
+
+        <!-- PLUIE -->
+        <ImageButton
+            android:id="@+id/btn_son_pluie"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:layout_margin="8dp"
+            android:background="@drawable/bg_sound_inactive"
+            android:backgroundTint="@null"
+            android:padding="14dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/ic_rain"
+            android:contentDescription="Pluie"
+            app:tint="@color/focus_icon_inactive" />
+
+        <!-- FORÊT -->
+        <ImageButton
+            android:id="@+id/btn_son_nature"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:layout_margin="8dp"
+            android:background="@drawable/bg_sound_inactive"
+            android:backgroundTint="@null"
+            android:padding="14dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/ic_forest"
+            android:contentDescription="Forêt"
+            app:tint="@color/focus_icon_inactive" />
+
+        <!-- FEU -->
+        <ImageButton
+            android:id="@+id/btn_son_feu"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:layout_margin="8dp"
+            android:background="@drawable/bg_sound_inactive"
+            android:backgroundTint="@null"
+            android:padding="14dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/ic_fire"
+            android:contentDescription="Feu"
+            app:tint="@color/focus_icon_inactive" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
