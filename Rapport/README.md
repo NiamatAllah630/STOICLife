@@ -8,6 +8,5 @@ Le rapport présente :
 - La conception UML
 - L'architecture du système
 - L'implémentation
-- Les tests réalisés
 - Les résultats obtenus
 - Les perspectives d'amélioration
