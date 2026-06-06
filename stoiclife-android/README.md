@@ -16,5 +16,4 @@ Fonctionnalités principales :
 - Système XP, niveaux et badges
 - Citations stoïciennes
 - Mode Focus
-Ainsi que ce dossier contient le fichier d'installation de l'application STOICLife.
-Le fichier APK permet de tester et d'installer l'application sur un appareil Android sans passer par Android Studio.
+
