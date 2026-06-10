@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/navy_primary"
+    android:padding="32dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <ImageView
+            android:id="@+id/splash_logo"
+            android:layout_width="280dp"
+            android:layout_height="180dp"
+            android:scaleType="fitCenter"
+            android:src="@mipmap/ic_launcher" />
+
+        <TextView
+            android:id="@+id/splash_app_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="STOICLife"
+            android:textColor="@color/gold_accent"
+            android:textSize="40sp"
+            android:textStyle="bold"
+            android:fontFamily="serif"
+            android:layout_marginTop="-12dp" />
+
+        <TextView
+            android:id="@+id/splash_tagline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="La sagesse stoïcienne au quotidien"
+            android:textColor="#99FFFFFF"
+            android:textSize="14sp"
+            android:textStyle="italic"
+            android:layout_marginTop="8dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="« Ce qui ne dépend pas de toi — laisse-le. »"
+            android:textColor="#60FFFFFF"
+            android:textSize="12sp"
+            android:gravity="center"
+            android:layout_marginTop="48dp" />
+
+        <Button
+            android:id="@+id/btn_commencer"
+            android:layout_width="224dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="32dp"
+            android:backgroundTint="@color/gold_accent"
+            android:text="Commencer"
+            android:textAllCaps="false"
+            android:textColor="@color/navy_primary"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="BTS Ibn Sina - Kénitra&#10;Développée par : Niamat Allah KADDOURI - kaddouriniamatallah630@gmail.com&#10;Hatim CHABBI - Chabbihatime7@gmail.com&#10;Encadrée par : M. Hamid ALHAIANE - hamid.alhaiane@gmail.com"
+        android:textColor="#80FFFFFF"
+        android:textSize="8sp"
+        android:gravity="center"
+        android:lineSpacingExtra="1dp" />
+
+</LinearLayout>

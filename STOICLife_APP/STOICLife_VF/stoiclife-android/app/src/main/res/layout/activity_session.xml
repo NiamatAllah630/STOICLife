@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/navy_dark">
+
+    <!-- Vidéo immersive -->
+    <TextureView
+        android:id="@+id/videoView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <!-- Image fallback si besoin -->
+    <ImageView
+        android:id="@+id/imgBackground"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:visibility="gone" />
+
+    <!-- Overlay sombre premium -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#65000000" />
+
+    <!-- Dégradé haut -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="190dp"
+        android:layout_gravity="top"
+        android:background="#800D1421" />
+
+    <!-- Dégradé bas -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="330dp"
+        android:layout_gravity="bottom"
+        android:background="#900D1421" />
+
+    <!-- Header -->
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="34dp"
+        android:layout_marginStart="18dp"
+        android:layout_marginEnd="18dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/btnBack"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:gravity="center"
+            android:text="‹"
+            android:textColor="@color/gold_accent"
+            android:textSize="38sp"
+            android:textStyle="bold"
+            android:background="@drawable/bg_circle_dark" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:layout_marginStart="12dp"
+            android:layout_marginEnd="12dp">
+
+            <TextView
+                android:id="@+id/tvTitreTop"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Activité"
+                android:textColor="@android:color/white"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:maxLines="1"
+                android:ellipsize="end" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Session en cours"
+                android:textColor="#CCFFFFFF"
+                android:textSize="13sp"
+                android:layout_marginTop="2dp" />
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:gravity="center"
+            android:text="✦"
+            android:textColor="@color/gold_accent"
+            android:textSize="22sp"
+            android:background="@drawable/bg_circle_dark" />
+
+    </LinearLayout>
+
+    <!-- Timer central premium -->
+    <FrameLayout
+        android:layout_width="248dp"
+        android:layout_height="248dp"
+        android:layout_gravity="center"
+        android:layout_marginBottom="42dp">
+
+        <!-- Cercle extérieur effet glass -->
+        <View
+            android:layout_width="248dp"
+            android:layout_height="248dp"
+            android:layout_gravity="center"
+            android:background="@drawable/bg_timer_outer_glass" />
+
+        <!-- Progress -->
+        <ProgressBar
+            android:id="@+id/progressTimer"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="218dp"
+            android:layout_height="218dp"
+            android:layout_gravity="center"
+            android:max="100"
+            android:progress="100"
+            android:rotation="-90"
+            android:progressDrawable="@drawable/bg_timer_progress" />
+
+        <!-- Centre du timer -->
+        <LinearLayout
+            android:layout_width="190dp"
+            android:layout_height="190dp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:background="@drawable/bg_timer_inner_glass"
+            android:padding="14dp">
+
+            <TextView
+                android:id="@+id/tvTimer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="10:00"
+                android:textColor="@android:color/white"
+                android:textSize="46sp"
+                android:textStyle="bold"
+                android:fontFamily="sans" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="temps restant"
+                android:textColor="#D9FFFFFF"
+                android:textSize="13sp"
+                android:textAllCaps="true"
+                android:letterSpacing="0.08"
+                android:layout_marginTop="2dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Respirez • Concentrez-vous"
+                android:textColor="@color/gold_accent"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                android:layout_marginTop="10dp" />
+
+        </LinearLayout>
+
+    </FrameLayout>
+
+    <!-- Carte du bas -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_marginStart="18dp"
+        android:layout_marginEnd="18dp"
+        android:layout_marginBottom="22dp"
+        android:orientation="vertical"
+        android:padding="20dp"
+        android:background="@drawable/bg_glass_premium">
+
+        <!-- Petite barre -->
+        <View
+            android:layout_width="44dp"
+            android:layout_height="5dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/bg_sheet_handle_dark" />
+
+        <!-- Titre activité -->
+        <TextView
+            android:id="@+id/tvTitre"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Activité"
+            android:textColor="@android:color/white"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:fontFamily="serif"
+            android:maxLines="2"
+            android:ellipsize="end" />
+
+        <!-- Conseil -->
+        <TextView
+            android:id="@+id/tvConseil"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Reste concentré."
+            android:textColor="#E6FFFFFF"
+            android:textSize="15sp"
+            android:lineSpacingExtra="4dp"
+            android:layout_marginTop="8dp" />
+
+        <!-- Ligne motivation -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:padding="14dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/bg_glass_small">
+
+            <TextView
+                android:layout_width="42dp"
+                android:layout_height="42dp"
+                android:gravity="center"
+                android:text="🛡"
+                android:textSize="22sp"
+                android:background="@drawable/bg_circle_dark" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Chaque minute d’attention renforce votre discipline."
+                android:textColor="#E6FFFFFF"
+                android:textSize="13sp"
+                android:lineSpacingExtra="3dp"
+                android:layout_marginStart="12dp" />
+
+        </LinearLayout>
+
+        <!-- Actions -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="18dp">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnPause"
+                android:layout_width="0dp"
+                android:layout_height="56dp"
+                android:layout_weight="1"
+                android:text="Pause"
+                android:textAllCaps="false"
+                android:textColor="@android:color/white"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                app:backgroundTint="@color/navy_primary"
+                app:cornerRadius="18dp"
+                android:layout_marginEnd="8dp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnTerminer"
+                android:layout_width="0dp"
+                android:layout_height="56dp"
+                android:layout_weight="1"
+                android:text="Terminer"
+                android:textAllCaps="false"
+                android:textColor="@color/navy_primary"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                app:backgroundTint="@color/gold_accent"
+                app:cornerRadius="18dp"
+                android:layout_marginStart="8dp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</FrameLayout>

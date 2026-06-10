@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Thème principal STOICLife -->
+    <style name="Theme.STOICLife" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="colorPrimary">@color/navy_primary</item>
+        <item name="colorPrimaryVariant">@color/navy_dark</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <item name="colorSecondary">@color/gold_accent</item>
+        <item name="colorOnSecondary">@color/navy_primary</item>
+        <item name="android:windowBackground">@color/beige_bg</item>
+        <item name="android:statusBarColor">@color/navy_primary</item>
+        <item name="android:navigationBarColor">@color/navy_primary</item>
+    </style>
+
+    <!-- Thème Splash (plein écran) -->
+    <style name="Theme.STOICLife.Splash" parent="Theme.STOICLife">
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowBackground">@color/navy_primary</item>
+    </style>
+
+    <!-- Thème Focus (immersif) -->
+    <style name="Theme.STOICLife.Focus" parent="Theme.STOICLife">
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowBackground">@color/navy_dark</item>
+        <item name="android:statusBarColor">@color/navy_dark</item>
+    </style>
+
+    <!-- Bouton Principal Or -->
+    <style name="Widget.STOICLife.Button.Gold" parent="Widget.MaterialComponents.Button">
+        <item name="backgroundTint">@color/gold_accent</item>
+        <item name="android:textColor">@color/navy_primary</item>
+        <item name="android:textStyle">bold</item>
+        <item name="cornerRadius">14dp</item>
+        <item name="android:paddingTop">14dp</item>
+        <item name="android:paddingBottom">14dp</item>
+    </style>
+
+    <!-- Bouton Secondaire -->
+    <style name="Widget.STOICLife.Button.Outline" parent="Widget.MaterialComponents.Button.OutlinedButton">
+        <item name="strokeColor">@color/navy_primary</item>
+        <item name="android:textColor">@color/navy_primary</item>
+        <item name="cornerRadius">14dp</item>
+    </style>
+
+</resources>

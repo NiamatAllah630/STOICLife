@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/beige_bg">
+
+    <ScrollView
+        android:id="@+id/scroll_add_activity"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:scrollbars="vertical"
+        android:fadeScrollbars="false"
+        android:paddingBottom="96dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingStart="18dp"
+            android:paddingEnd="18dp"
+            android:paddingTop="18dp"
+            android:paddingBottom="120dp">
+
+            <!-- Header premium -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                app:cardCornerRadius="26dp"
+                app:cardElevation="4dp"
+                app:cardBackgroundColor="@color/navy_primary">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="20dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/btn_back"
+                            android:layout_width="44dp"
+                            android:layout_height="44dp"
+                            android:gravity="center"
+                            android:text="‹"
+                            android:textColor="@color/gold_accent"
+                            android:textSize="36sp"
+                            android:textStyle="bold"
+                            android:background="@android:color/transparent" />
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical"
+                            android:layout_marginStart="8dp">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Ajouter une activité"
+                                android:textColor="@color/gold_accent"
+                                android:textSize="25sp"
+                                android:textStyle="bold"
+                                android:fontFamily="serif" />
+
+                            <TextView
+                                android:id="@+id/tv_subtitle"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Choisissez une activité adaptée à cette période."
+                                android:textColor="#E6FFFFFF"
+                                android:textSize="14sp"
+                                android:lineSpacingExtra="3dp"
+                                android:layout_marginTop="4dp" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/tv_plage_selected"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="🌅 Matin"
+                        android:textColor="@color/navy_primary"
+                        android:textStyle="bold"
+                        android:textSize="15sp"
+                        android:paddingStart="14dp"
+                        android:paddingEnd="14dp"
+                        android:paddingTop="8dp"
+                        android:paddingBottom="8dp"
+                        android:layout_marginTop="18dp"
+                        android:background="@drawable/bg_circle_gold_light" />
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- Type d'activité -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                app:cardCornerRadius="24dp"
+                app:cardElevation="3dp"
+                app:cardBackgroundColor="@color/beige_card">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="18dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Type d’activité"
+                        android:textColor="@color/navy_primary"
+                        android:textSize="19sp"
+                        android:textStyle="bold"
+                        android:fontFamily="serif"
+                        android:layout_marginBottom="5dp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Sélectionnez la catégorie qui correspond à votre besoin."
+                        android:textColor="@color/text_secondary"
+                        android:textSize="14sp"
+                        android:layout_marginBottom="14dp" />
+
+                    <LinearLayout
+                        android:id="@+id/ll_type_container"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical" />
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- Activités disponibles -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                app:cardCornerRadius="24dp"
+                app:cardElevation="3dp"
+                app:cardBackgroundColor="@color/beige_card">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="18dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Activités disponibles"
+                        android:textColor="@color/navy_primary"
+                        android:textSize="19sp"
+                        android:textStyle="bold"
+                        android:fontFamily="serif"
+                        android:layout_marginBottom="5dp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Touchez une activité pour afficher son résumé."
+                        android:textColor="@color/text_secondary"
+                        android:textSize="14sp"
+                        android:layout_marginBottom="14dp" />
+
+                    <LinearLayout
+                        android:id="@+id/ll_activity_container"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical" />
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- Résumé -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="18dp"
+                app:cardCornerRadius="24dp"
+                app:cardElevation="3dp"
+                app:cardBackgroundColor="@color/navy_primary">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="18dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Résumé sélectionné"
+                        android:textColor="@color/gold_accent"
+                        android:textSize="19sp"
+                        android:textStyle="bold"
+                        android:fontFamily="serif"
+                        android:layout_marginBottom="10dp" />
+
+                    <TextView
+                        android:id="@+id/tv_resume_title"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Aucune activité sélectionnée"
+                        android:textColor="@color/white"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tv_resume_details"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Choisissez une activité pour voir le résumé."
+                        android:textColor="#E0FFFFFF"
+                        android:textSize="14sp"
+                        android:lineSpacingExtra="3dp"
+                        android:layout_marginTop="6dp" />
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- Bouton fixe en bas -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="92dp"
+        android:layout_gravity="bottom"
+        android:orientation="vertical"
+        android:paddingStart="18dp"
+        android:paddingEnd="18dp"
+        android:paddingTop="12dp"
+        android:paddingBottom="18dp"
+        android:background="@color/beige_bg">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_add_activity"
+            android:layout_width="match_parent"
+            android:layout_height="58dp"
+            android:text="Ajouter dans cette plage"
+            android:textAllCaps="false"
+            android:textSize="17sp"
+            android:textStyle="bold"
+            android:textColor="@color/navy_primary"
+            app:backgroundTint="@color/gold_accent"
+            app:cornerRadius="18dp"
+            android:elevation="6dp" />
+
+    </LinearLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

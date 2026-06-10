@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">STOICLife</string>
+    <string name="nav_accueil">Accueil</string>
+    <string name="nav_planning">Planning</string>
+    <string name="nav_progression">Progression</string>
+    <string name="nav_profil">Profil</string>
+    <string name="btn_connexion">Se connecter</string>
+    <string name="btn_inscription">S\'inscrire</string>
+    <string name="btn_demarrer">Démarrer</string>
+    <string name="btn_sauvegarder">Enregistrer</string>
+    <string name="hint_email">Email</string>
+    <string name="hint_password">Mot de passe</string>
+    <string name="hint_nom">Prénom</string>
+</resources>
