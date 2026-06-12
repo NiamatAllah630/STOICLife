@@ -1,5 +1,7 @@
 # Rapport
 
+- Rapport_STOICLife.pdf (dossier Rapport)
+Si l'aperçu GitHub ne s'affiche pas, veuillez télécharger le fichier PDF pour le consulter.
 Ce dossier contient le rapport final du projet de fin d'études STOICLife.
 
 Le rapport présente :
